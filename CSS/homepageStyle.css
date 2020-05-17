@@ -1,92 +1,100 @@
-
-*
+body
 {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
-body
+header
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 100px;
 	background: #131419;
-}
-.form
-{
-	position: relative;
-	width: 350px;
-	padding: 40px 40px 60px;
-	background: #131419;
-	border-radius: 10px;
-	text-align: center;
-	box-shadow: -5px -5px 20px rgba(255,255,255,0.2),
-	 			5px 5px 15px rgba(0,0,0,0.01);
-}
-.form h2
-{
-	color: #c7c7c7;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 4px;
-}
-.form .input
-{
-	text-align: left;
-	margin-top: 40px;
-}
-.form .input .inputBox
-{
-	margin-top: 20px;
-}
-.form .input .inputBox label
-{
-	display: block;
-	color: #868686;
-	margin-bottom: 5px;
-	font-size: 18px;
-}
-.form .input .inputBox input
-{
 	width: 100%;
+	box-sizing: border-box;
+}
+header .logo img
+{
 	height: 50px;
-	background: #131519;
-	border: none;
-	outline: none;
-	border-radius: 40px;
-	padding: 5px 15px;
+	width: 83px;
+	font-size: 24px;
+	float: left;
+	font-weight: bold;
+}
+header nav
+{
+	float: right;
+}
+header nav ul
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+header nav ul li
+{
+	list-style: none;
+}
+header nav ul li a
+{
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
 	color: #fff;
-	font-size: 18px;
-	color: #03a9f4;
-	box-shadow: inset -2px -2px 6px rgba(255,255,255,0.1),
-	 			inset 2px 2px 6px rgba(0,0,0,0.8);;
+	text-decoration: none;
+	display: block;
 }
-.form .input .inputBox input[type="submit"]
+header nav ul li a:hover,
+header nav ul li a.active
 {
-	margin-top: 20px;
-	box-shadow: -2px -2px 6px rgba(255,255,255,0.1),
-				2px 2px 6px rgba(0,0,0,0.8);
+	color: #fff;
+	background: #074278;
 }
-.form .input .inputBox input[type="submit"]:active
+.menu-toggle
 {
-	color: #006c9c;
-	margin-top: 20px;
-	box-shadow: inset -2px -2px 6px rgba(255,255,255,0.1),
-				inset 2px 2px 6px rgba(0,0,0,0.8);
+	color: #fff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
 }
-.form .input .inputBox input::placeholder
+nav ul li a i
 {
-	color: #555;
-	font-size: 18px;
+	margin-left: 5px;
 }
-.forget
+@media (max-width: 991px)
 {
-	margin-top: 30px;
-	color: #555;
-}
-.forget a
-{
-	color: #ff0047;
-}
+	header
+	{
+		padding: 0 20px;
+	}
+	.menu-toggle
+	{
+		display: block;
+	}
+	header nav
+	{
+		position: absolute;
+		width: 100%;
+		height: calc(100vh - 50vh);
+		background: #333;
+		top: 50px;
+		left: -100%;
+		transition: 0.5s;
+	}
+	header nav.active
+	{
+		left: 0;
+	}
+	header nav ul
+	{
+		display: block;
+		text-align: center;
+	}
+	header nav ul li a
+	{
+		border-bottom: 1px solid rgba(0,0,0,0.69);
+	}
+} 

@@ -14,7 +14,7 @@
 	// Create database
 	$sql = "CREATE DATABASE coffeeShop";
 	if (mysqli_query($conn, $sql)) {
-	    echo "Database created successfully! ";
+	    echo "Tạo thành công database coffeeShop! <br> ";
 	} else {
 	    echo "Error creating database: " . mysqli_error($conn);
 	}
@@ -27,15 +27,33 @@
 	//Tạo bảng
 	$sql = "CREATE TABLE adminAcc(
 		adminUsername VARCHAR(30) NOT NULL UNIQUE primary key,
-		psswd VARCHAR(30) NOT NULL
+		psswd VARCHAR(30) NOT NULL,
+		fullName NVARCHAR(30),
+		age INT,
+		phoneNum CHAR(15)
 	)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 	";
  	if ($conn->query($sql) === TRUE) {
-	    echo "Table created successfully";
+	    echo "Tạo bảng adminAcc thành công! <br> ";
 	}
 	else {
-		echo "Error creating table: " . $conn->error;
+		echo "Error create_function(args, code)ng table: " . $conn->error;
 	}
 
 	$conn->close();
+?>
+
+<?php
+	include 'connectDB.php';
+	//Tạo tài khoản admin
+	$sql = "INSERT INTO adminAcc VALUES ('517h0111','123', 'Cao Trần Tuấn Duy', 21, '0903118098');";
+	if (mysqli_multi_query($conn, $sql)) {
+   	 echo "Đã thêm tài khoản admin! <br> ";
+	} else {
+    	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	}
+
+	
+	mysqli_close($conn);
+
 ?>

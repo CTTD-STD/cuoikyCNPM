@@ -11,7 +11,7 @@
 	// Check connection
 
 	if ($conn) {
-		 echo "Connect to database successfully!";
+		 echo "Connect to database successfully! <br> ";
 		 echo " ";
 	}
 
