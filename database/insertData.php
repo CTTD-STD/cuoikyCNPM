@@ -37,7 +37,7 @@
 	    echo "Tạo bảng adminAcc thành công! <br> ";
 	}
 	else {
-		echo "Error create_function(args, code)ng table: " . $conn->error;
+		echo "Error creating table: " . $conn->error;
 	}
 
 	$conn->close();
@@ -48,12 +48,34 @@
 	//Tạo tài khoản admin
 	$sql = "INSERT INTO adminAcc VALUES ('517h0111','123', 'Cao Trần Tuấn Duy', 21, '0903118098');";
 	if (mysqli_multi_query($conn, $sql)) {
-   	 echo "Đã thêm tài khoản admin! <br> ";
+   	 echo "Đã thêm tài khoản admin: 517H0111! <br> ";
 	} else {
     	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 	}
 
-	
 	mysqli_close($conn);
+?>
 
+<?php
+	include 'connectDB.php';
+	//tạo bảng
+	$sql = "CREATE TABLE guestAcc(
+		guestUsername VARCHAR(30) NOT NULL UNIQUE primary key,
+		psswd VARCHAR(30) NOT NULL,
+		Firstname NVARCHAR(30) NOT NULL,
+		Lastname NVARCHAR(30) NOT NULL,
+		Bday TEXT NOT NULL,
+		Address TEXT NOT NULL,
+		Tel int(10) NOT NULL,
+		Email VARCHAR(30) NOT NULL
+	)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	";
+ 	if ($conn->query($sql) === TRUE) {
+	    echo "Tạo bảng guestAcc thành công! <br> ";
+	}
+	else {
+		echo "Error creating table: " . $conn->error;
+	}
+
+	$conn->close();
 ?>
