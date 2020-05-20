@@ -10,11 +10,6 @@
 	$conn->set_charset('utf8');
 	// Check connection
 
-	if ($conn) {
-		 echo "Connect to database successfully! <br> ";
-		 echo " ";
-	}
-
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
