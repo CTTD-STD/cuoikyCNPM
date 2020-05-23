@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] != true)
+	{
+		header("Location: adminLoginForm.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,28 +29,23 @@
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav ml-lg-auto">
-							<?php
-								if( !isset($_COOKIE['user']))
-								{
-									?>
-										<li class="nav-item"><a class="nav-link" href="#">Admin</a></li>
-									<?php
-								}
-								else{
-									?>
-									<li class="nav-item">
-										<a class="nav-link" href="guestInfo.php">Welcome, <?php echo $_COOKIE['user'];?>
-										!</a>
-									</li>
-									<?php
-								}
-							?>
+							<li class="nav-item"><a class="nav-link" href="adminDashboard.php">Admin</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
 		<section class="sec1" id="menu" style="height: 80vh;">
+			<div class="container" style="text-align: center; padding: 15px;">
+				<h1 style="color: #fff">Admin functions:</h1>
+				<a href="adminFunction.php"><button type="button" class="btn btn-info btn-lg">Modify Menu</button></a>
+			</div>
+			<div class="container" style="text-align: center; padding: 15px;">
+				<a href="reservation.php"><button type="button" class="btn btn-info btn-lg">Reservation</button></a>
+			</div>
+			<div class="container" style="text-align: center; padding: 15px;">
+				<button type="button" class="btn btn-danger"><a href="logout.php" style="text-decoration: none; color: white;">Logout</a></button> 
+			</div>
 		</section>
 		<hr>
 		<footer>
@@ -63,7 +65,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-				<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 		AOS.init();
 		</script>

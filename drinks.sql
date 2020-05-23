@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `drinks` (
   `id` int(11) NOT NULL,
-  `name` varchar(150) NOT NULL,
+  `name` varchar(150) UNIQUE NOT NULL ,
   `price` int(11) NOT NULL,
   `image` varchar(150) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -39,8 +39,8 @@ CREATE TABLE `drinks` (
 --
 
 INSERT INTO `drinks` (`id`, `name`, `price`, `image`) VALUES
-(75, 'Cà Phê Sữa ', 21000, '766529138.jpg'),
-(76, 'Học Sinh THCS', 21000000, '89666375_4243593765711385_6054223030433873920_o.jpg');
+(75, 'Cà Phê Sữa ', 21000, 'img1.jpg'),
+(76, 'Học Sinh THCS', 21000000, 'img2.jpg');
 
 --
 -- Indexes for dumped tables
@@ -56,6 +56,8 @@ ALTER TABLE `drinks`
 -- AUTO_INCREMENT for dumped tables
 --
 
+ALTER TABLE `drinks`
+	ADD UNIQUE (`name`);
 --
 -- AUTO_INCREMENT for table `drinks`
 --

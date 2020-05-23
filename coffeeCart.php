@@ -5,10 +5,10 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Coffe Cắc Cùm Cum</title>
+		<title>Coffee Cart</title>
 		<script src="js/jquery.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="adminLoginStyle.css">
+		<link rel="stylesheet" type="text/css" href="CSS/adminLoginStyle.css">
 		<script src="js/bootstrap.min.js"></script>
 		<style>
 		.popover
@@ -34,17 +34,21 @@
 		  left: 16px;
 		  font-size: 18px;
 		}
+		.img-responsive{
+			height: 150px;
+			width: 220px;
+		}
 
 		</style>
 	</head>
 	<body>
 		<div class="containIMG">
-			<div class="topleft"><h1><img src="logoTDT.jpg" style=" width:100px; height:60px; "></h1></div>
+			<div class="topleft"><h1><img src="img/logoTDT.jpg" style=" width:100px; height:60px; "></h1></div>
 		</div>
 		
 		<div class="container ">
 			<br />
-			<h1 align="center" class="rainbow-text">Coffe Cắc Cùm Cum</h1>
+			<h1 align="center" class="rainbow-text">Coffee Cart</h1>
 			<br />
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">

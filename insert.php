@@ -25,6 +25,10 @@ if(isset($_POST["operation"]))
 		{
 			echo 'Data Inserted';
 		}
+		if(empty($result))
+		{
+			echo 'Item is already exists';
+		}
 	}
 	if($_POST["operation"] == "Edit")
 	{
@@ -54,6 +58,10 @@ if(isset($_POST["operation"]))
 		if(!empty($result))
 		{
 			echo 'Data Updated';
+		}
+		if(empty($result))
+		{
+			echo 'Item is already exists';
 		}
 	}
 }

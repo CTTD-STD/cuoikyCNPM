@@ -54,7 +54,7 @@
 									<label for="id">Tên đăng nhập:</label>
 									<input class="form-control" id="id"  value="<?php echo $_COOKIE['user']; ?>" readonly>
 								</div>
-								 <?php 
+								<?php 
 									require_once('database/connectDB.php');
 									$id = $_COOKIE['user'];
 									$sql = "SELECT * FROM guestacc where guestUsername = '$id'";

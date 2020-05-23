@@ -32,8 +32,19 @@
 		$stmt = $conn->prepare($sql);
 		$stmt->bind_param("sssssss", $Rname, $Contact, $Remail, $Rnum, $Rdate, $Rtime,$Rmessage);
 		
-		$isOK = $stmt->execute();
-		
+		$reServed = $stmt->execute();
+		if ($reServed) {?>
+			<div class="alert alert-success" style="padding: 0; margin: 0;">
+				Information has been recored.
+			</div>
+		<?php	
+		}
+		else{?>
+			<div class="alert alert-danger">
+				Error.
+			</div>
+		<?php
+		}
 		$stmt->close();
 		$conn->close();
 	}
@@ -46,6 +57,11 @@
 		<title>Home</title>
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<script src="js/jquery.min.js"></script>
+		
+		<script src="js/bootstrap.min.js"></script>
+
 		<!--animation on scroll-->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 		<link rel="stylesheet" type="text/css" href="CSS/homepageStyle.css">		
@@ -106,11 +122,18 @@
 					<div class="offset-sm-2 col-sm-8">
 						<div class="headerText text-center">
 							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Special Menu</h2>
+							<div class="makeorder" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" style="text-align: center;">
+					<a href="coffeeCart.php" class="btn btn-success" id="clear_cart">
+						<span></span> Make Order
+					</a>
+				</div>
 							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">This is our menu.</p>
 						</div>
 					</div>
 				</div>
+				
 				<div class="row">
+
 					<div class="col-sm-4">
 						<div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
 							<div class="imgBx">
@@ -172,7 +195,11 @@
 						</div>
 					</div>
 				</div>
+
+				
 			</div>
+
+			
 		</section>
 		<section class="signIn1" id="Reservation">
 			<div class="container">
