@@ -55,7 +55,6 @@
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="sr-only">Menu</span>
-						<span class="glyphicon glyphicon-menu-hamburger"></span>
 						</button>
 						<a class="navbar-brand">Đơn Nước</a>
 					</div>
@@ -64,7 +63,7 @@
 						<ul class="nav navbar-nav">
 							<li>
 								<a id="cart-popover" class="btn" data-placement="bottom" title="Shopping Cart">
-									<span class="glyphicon glyphicon-shopping-cart"></span>
+									
 									<span class="badge"></span>
 									<span class="total_price">VND 0.00</span>
 								</a>
@@ -78,10 +77,10 @@
 				<span id="cart_details"></span>
 				<div align="right">
 					<a href="#" class="btn btn-primary" id="check_out_cart">
-					<span class="glyphicon glyphicon-shopping-cart"></span> Check out
+					 Check out
 					</a>
 					<a href="#" class="btn btn-default" id="clear_cart">
-					<span class="glyphicon glyphicon-trash"></span> Clear
+					 Clear
 					</a>
 				</div>
 			</div>
