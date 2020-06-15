@@ -43,7 +43,7 @@
 	</head>
 	<body>
 		<div class="containIMG">
-			<div class="topleft"><h1><img src="img/logoTDT.jpg" style=" width:100px; height:60px; "></h1></div>
+			<div class="topleft"><a href="index.php"><h1><img src="img/logoTDT.jpg" style=" width:100px; height:60px; "></h1></a></div>
 		</div>
 		
 		<div class="container ">

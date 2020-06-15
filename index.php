@@ -127,7 +127,7 @@
 						<span></span> Make Order
 					</a>
 				</div>
-							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">This is our menu.</p>
+							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">This is our special menu.</p>
 						</div>
 					</div>
 				</div>

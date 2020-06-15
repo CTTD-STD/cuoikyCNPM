@@ -62,7 +62,7 @@
 		</header>
 		<section class="sec1" id="menu" style="height: 100vh; margin: 0;">
 			<div class="container">
-				<div class="box"style="height: 100%;">
+				<div class="box" style="height: 100vh;">
 
 					<h1 align="center">Menu Management</h1>
 					<br />
@@ -71,7 +71,7 @@
 						<div style="text-align: center; margin-bottom: 20px;">
 							<button type="button" id="add_button" data-toggle="modal" data-target="#drinkModal" class="btn btn-info btn-lg">Add</button>
 						</div>
-						<table id="drink_data" class="table table-bordered table-striped" style="width: 100%; text-align: center; justify-content: center;">
+						<table id="drink_data" class="table table-bordered table-striped" style=" width: 100%; text-align: center; justify-content: center;">
 							<thead>
 								<tr>
 									<th width="10%">Image</th>
@@ -115,8 +115,8 @@
 				</div>
 			</div>
 		</section>
-		<hr>
-		<footer style="height: 20vh">
+		<hr style="margin: 125px;">
+		<footer style="height: 30vh">
 			<div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
 				<div class="row">
 					<div class="col-sm-12">
